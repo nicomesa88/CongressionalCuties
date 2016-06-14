@@ -9,7 +9,7 @@ var legsCards = document.querySelector('.pols')
 var handleData = function(apiResponse) {
     console.log(apiResponse)
     var legArray = apiResponse.results
-    var htmlString = ''
+    var htmlString = '<p>'+'</p>'
     for (var i = 0; i < legArray.length; i ++) {
         var legislatorObject = legArray[i]
         console.log(legislatorObject.state_name)
@@ -25,6 +25,7 @@ var handleData = function(apiResponse) {
     }
 
     legsCards.innerHTML = htmlString
+
 }
 
 
