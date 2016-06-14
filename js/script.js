@@ -5,6 +5,7 @@ var congressionalPromise = $.getJSON('https://congress.api.sunlightfoundation.co
 
 var legsCards = document.querySelector('.pols')
 
+
 var handleData = function(apiResponse) {
     console.log(apiResponse)
     var legArray = apiResponse.results
@@ -13,7 +14,7 @@ var handleData = function(apiResponse) {
         var legislatorObject = legArray[i]
         console.log(legislatorObject.state_name)
         htmlString += '<h2 class= "name">' + legislatorObject.first_name + ' ' + legislatorObject.last_name + '</h2>'
-        htmlString += '<h3 class= "partyState"> ' + legislatorObject.title + ' -- ' + legislatorObject.party + ' - ' + legislatorObject.state + '</h3>'
+        htmlString += '<h3 class= "partyState"> ' + legislatorObject.title + ' -- ' + legislatorObject.party + ' - ' + legislatorObject.state_name + '</h3>'
         htmlString += '<ul>'
                 htmlString += '<li class = "email"> email: ' + legislatorObject.email +'</li>'
                 htmlString += '<li class = "website"> website: ' +legislatorObject.website +'</li>'
@@ -26,6 +27,5 @@ var handleData = function(apiResponse) {
     legsCards.innerHTML = htmlString
 
 }
-
 
 congressionalPromise.then(handleData)
