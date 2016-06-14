@@ -15,20 +15,14 @@ body{
 }
 
 
-#data-output-container{
-  height: 300px;
+#container div {
+    height: 300px;
   overflow: scroll;
-}
-
-.card{
+  display: inline-block;
   min-width: 30%;
   padding: 10px;
-  display: inline-block;
   margin-bottom: 20px;
   margin-left: 1%;
   margin-right: 1%;
-}
-
-.card .pols{
   background: #C8F7C5;
 }
