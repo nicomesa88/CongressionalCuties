@@ -2,7 +2,6 @@ console.log($)
 
 var congressionalPromise = $.getJSON('https://congress.api.sunlightfoundation.com/legislators?apikey=f69289663395468db48b632d79c7f151')
 
-var statesContainer = document.querySelector("#statesContainer")
 
 var legsCards = document.querySelector('.pols')
 
